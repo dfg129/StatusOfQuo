@@ -1,0 +1,36 @@
+@(title: String)
+<!DOCTYPE html>
+
+<html>
+<head>
+	<link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+	<link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/bootstrap.css")">
+	<link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")"></head>
+
+<body data-ng-app="StatusOfQuo">
+
+	<div class="container" data-ng-controller="SOQController">
+
+		<h1>
+			<a href="#">@title</a>
+		</h1>
+		<ul>
+			<li data-ng-repeat="article in articles">
+				<div>{{article.name}}</div>
+			</li>
+		</ul>
+		<button ng-click="getArticles()">Get</button>
+	</div>
+	{{3 + 2}}
+	<div class="footer navbar-fixed-bottom">
+		<hr>
+		<p>&copy; 2013</p>
+	</div>
+
+	<script src='@routes.Assets.at("javascript/vendor/angular.js")'></script>	
+	<script src='@routes.Assets.at("javascript/statusofquo.js")'></script>	
+	<script src='@routes.Assets.at("javascript/vendor/lodash.js")'></script>	
+	<script src='@routes.Assets.at("javascript/vendor/restangular.js")'></script>	
+
+</body>
+</html>
