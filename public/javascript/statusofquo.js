@@ -26,11 +26,16 @@
 
 	module.directive("article", function() {
 		return {
-			restrict: "A",
+			restrict: 'A',
+			template: '<ul>' +
+			              '<li ng-repeat="article in articles"' +
+			                   '<h1>Article</h1><span>{{article.name}}</span>' +
+			              '</li>' +
+			          '</ul>',
 			link: function(scope, element, attrs) {
-				element.text(element.toString());
+				
 			}
 		}
-	})
+	});
 
 }(angular.module("StatusOfQuo", ["restangular"])));
