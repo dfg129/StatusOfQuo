@@ -27,7 +27,7 @@
 	module.directive("article", function() {
 		return {
 			restrict: 'A',
-			templateURL: 'views/articles.view.html',
+			templateUrl: '/views/articles.view.html',
 			link: function(scope, element, attrs) {
 				
 			}
