@@ -3,7 +3,7 @@
 		<article>
 		<div  class="row">
 				<h4 class="span4">{{article.title}}</h4>
-				<h4 class="span4 offset3">{{article.published | date: 'MM/dd/yyyy'}}</h4>
+				<h4 class="span4 offset3">{{ article.published.$date | date: 'mediumDate' }}</h4>
 			</div>
 		</article>
 		</li>
