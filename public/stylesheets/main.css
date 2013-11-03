@@ -1,0 +1,41 @@
+
+
+	/* ==========================================================================
+	   Author's custom styles
+	   ========================================================================== */
+
+	body {
+		background: url(../images/mooning.png) center center fixed; 
+	        -webkit-background-size: cover;
+	        -moz-background-size: cover;
+	        -o-background-size: cover;
+	        background-size: cover;
+	        background-repeat: no-repeat;
+
+		font-size: 62.5%;
+	}
+
+	#title {
+		font-style: italic;
+		font-size: 6em;
+		font-family: Geneva, Tahoma, Verdana, sans-serif;
+		color: blue;
+	}
+
+	.list-style {
+		list-style: none;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

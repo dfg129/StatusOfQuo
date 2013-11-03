@@ -3,7 +3,7 @@
 (function(module) {
 	module.controller("SOQController", ["$scope", "Restangular", function($scope, Restangular) {
 	  
-        $scope.getArticles = function () {
+        var getArticles = function () {
         	var articles = Restangular.all('articles');
             articles.getList().then(function(articles) {
             	$scope.articles = articles[0];
@@ -14,12 +14,9 @@
 
 	    $scope.addArticle = function () {
 	    	articlesREST.post('article', newArticle);
-	    }
+	    };
 
-	    var newArticle = {
-	    	name: "Article 1",
-	    	length:"1"
-	    }
+	    getArticles();
 	    
 	}]);
  

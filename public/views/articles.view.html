@@ -1,8 +1,11 @@
-<article>
 	<ul>
-		<li ng-repeat="article in articles">
-			<h1>Article_</h1>
-			<span>{{article.name}}</span>
+		<li  class="list-style"  ng-repeat="article in articles">
+		<article>
+		<div  class="row">
+				<h4 class="span4">{{article.title}}</h4>
+				<h4 class="span4 offset3">{{article.published | date: 'MM/dd/yyyy'}}</h4>
+			</div>
+		</article>
 		</li>
 	</ul>
-</article>
+
