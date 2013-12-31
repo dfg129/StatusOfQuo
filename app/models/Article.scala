@@ -12,36 +12,34 @@ case class Article(
 	updated: Option[DateTime]
 )
 
-/*
-object Article {
-	implicit object ArticleBSONReader extends BSONDocumentReader[Article] {
-		def fromBSON(document: BSONDocument): Article = {
-			val doc = document.toTraversable
+/*val form = Form(
+	mapping(
+		"id" -> optional(of[String] verifying pattern(
+			"""a-fA-F0-9]{24}""".r,
+			"constraint.objectId")),
+			"title" -> nonEmptyText,
+			"content" -> text,
+			"published" -> optional(of[Long]),
+			"created" -> optional(of[Long]),
+			"updated" -> optional(of[Long])
+			) { (id, title, content, published, created, updated) => 
 			Article(
-				doc.getAs[BSONObjectID]("_id"),
-				doc.getAs[BSONString]("title"),
-				doc.getAs[BSONString]("content"),
-				doc.getAs[BSONDateTime]("published").map(dt => new DateTime(dt.value)),
-				doc.getAs[BSONDateTime]("created").map(dt => new DateTime(dt.value)),
-				doc.getAs[BSONDateTime]("updated").map(dt => new DateTime(dt.value))
-			)
-		}
-	}
-
-	implicit object ArticleBSONWriter extends BSONDocumentWriter[Article] {
-		def toBSON(arcile: Article) =  {
-			val bson = BSONDocument(
-				"_id" -> article.id.getOrElse(BSONObjectID.generate),
-				"title" -> BSONString(article.title),
-				"content" -> BSONString(article.content),
-				if(article.published.isDefined)
-				    bson += "published" -> BSONDateTime(article.published.get.getMillis),
-				if(article.created.isDefined)
-				    bson += "created" -> BSONDateTime(article.created.get.getMillis),
-				if(article.updated.isDefined)
-				    bson += "updated" -> BSONDateTime(article.updated.get.getMillis)
-				bson
-		    )
-		}
-	}
-} */
+				id.map(new BSONObjectID(_)),
+				title,
+				content,
+				published.map(new DateTime(_)),
+				created.map(new DateTime(_)),
+				updated.map(new DateTime(_))
+				)
+			 } { article => 
+			    Some(
+			    	( article.id.map(_.stringify),
+			    	  article.title,
+			    	  article.content,
+			    	  article.published.map(_.getMillis),
+			    	  article.created.map(_.getMillis),
+			    	  article.updated.map(_.getMillis))
+			    	)
+			}
+		)
+	)*/

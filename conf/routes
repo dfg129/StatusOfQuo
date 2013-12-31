@@ -10,5 +10,6 @@ GET     /articles                   controllers.Application.findArticles
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
 GET     /views/*file                controllers.Assets.at(path="/public/views", file)
-GET     /javascript/*file                controllers.Assets.at(path="/public/javascript", file)
+GET     /javascript/*file           controllers.Assets.at(path="/public/javascript", file)
+GET     /images/*file               controllers.Assets.at(path="/public/images", file)
 

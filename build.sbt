@@ -14,7 +14,7 @@ resolvers ++= Seq(
 )
 
 libraryDependencies ++= Seq(
-"org.reactivemongo" % "play2-reactivemongo_2.10" % "0.10.0-SNAPSHOT" exclude("com.github.scala-incubator.io", "scala-io-file_2.10.0-RC1")
-)
+"org.reactivemongo" % "play2-reactivemongo_2.10" % "0.11.0-SNAPSHOT" exclude("com.github.scala-incubator.io", "scala-io-file_2.10.0-RC1")
+) 
 
 

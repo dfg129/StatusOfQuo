@@ -13,6 +13,7 @@ import play.modules.reactivemongo._
 import play.modules.reactivemongo.json.collection.JSONCollection
 
 import play.api.libs.json._
+import play.api.libs.concurrent.Execution.Implicits._
 import play.api.Play.current
 
 
@@ -25,17 +26,20 @@ object Application extends Controller with MongoController {
   def collection: JSONCollection = db.collection[JSONCollection]("articles")
 
 
-  def create(title: String, published: java.util.Date) = Action.async {
-  		val json = Json.obj(
+  def create(article: Article) = Action.async {
+  /*	val articleTransformer = ( __ \ 'title' ).json.pick */
+
+        val title = article.title
+        val published = article.published
+  		  val json = Json.obj(
   			"title" -> title,
   			"published" -> published,
   			"created" -> new java.util.Date().getTime())
 
-  		collection.insert(json).map(lastError => Ok("Mongo LastError: %s".format(lastError)))
+  		   collection.insert(json).map(lastError => Ok("Mongo LastError: %s".format(lastError)))
   }
 
   def findArticles() = Action.async {
-
   	val cursor: Cursor[JsObject] = collection.find(Json.obj()).cursor[JsObject]
   	val futureArticlesList: Future[List[JsObject]] = cursor.collect[List]()
 
