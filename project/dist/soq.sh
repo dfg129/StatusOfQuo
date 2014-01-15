@@ -10,6 +10,6 @@ else
   noExt="${file%.*}"
   echo "$noExt"
   sudo rm -rf ~/soq/"$noExt"
-   sudo gunzip $file -d ~/soq/
+   sudo unzip $file -d ~/soq/
    sudo mv ~/soqsoq/"$noExt" ~/soq/current
 fi
