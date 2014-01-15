@@ -11,5 +11,5 @@ else
   echo "$noExt"
   sudo rm -rf ~/soq/"$noExt"
    sudo unzip $file -d ~/soq/
-   sudo mv ~/soqsoq/"$noExt" ~/soq/current
+   sudo mv ~/soq/"$noExt" ~/soq/current
 fi
