@@ -1,7 +1,31 @@
-@(message: String)
+@(title: String)
+<!DOCTYPE html>
 
-@main("The Status of Quo") {
+<html>
+<head>
+	<link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+	<link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/bootstrap.css")">
+	<link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+</head>
 
-    @play20.welcome(message)
+<body data-ng-app="StatusOfQuo">
 
-}
+	<div class="quo-container" data-ng-controller="SOQController">
+		<div class="quo-title" id="t4">
+			<a  href="#">@title</a>
+		</div>	
+	 <div main-view></div>	
+	</div>
+	{{3 + 2}}
+	<div class="footer navbar-fixed-bottom">
+		<hr>
+		<p>&copy; 2013</p>
+	</div>
+
+	<script src='@routes.Assets.at("vendor/angular.js")'></script>	
+	<script src='@routes.Assets.at("statusofquo.js")'></script>	
+	<script src='@routes.Assets.at("vendor/lodash.js")'></script>	
+	<script src='@routes.Assets.at("vendor/restangular.js")'></script>
+</body>
+</html>
+

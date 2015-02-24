@@ -1,8 +1,72 @@
 
-html { 
-  background: url(images/notebook1.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+html {
+	height: 100%;
 }
+
+	body {
+		background: url(../images/notebook1.jpg) no-repeat center center fixed; 
+	        -webkit-background-size: cover;
+	        -moz-background-size: cover;
+	        -o-background-size: cover;
+	        background-size: cover;
+	        background-repeat: no-repeat;
+
+		font-size: 62.5%;
+		width: 100%;
+		height: 100%;
+		margin: 0;
+	}
+
+	.quo-title {
+		font-style: italic;
+		font-size: 3em;
+		font-family: Geneva, Tahoma, Verdana, sans-serif;
+		color: yellow;
+		height: 50px;
+		margin-top: 3%;
+		margin-left: 25%;
+		//border: 1 solid red;
+	}
+
+	.list-style {
+		list-style: none;
+	}
+
+	.quo-container {
+		// background-color: #11aa55;
+		height: 93%;
+		//border: 1px solid red;
+	}
+
+	.quo-main {
+		height: 100%;
+		width: 100%;
+		background-color: #aabb22;
+		margin: 0 5% 0 5%;
+	}
+
+	div.left_pillar, div.right_pillar {
+		background-color: green;
+		height: 100%;
+	}
+
+	.main_panel {
+		background-color: yellow;
+		height: 100%;
+	}
+
+	.archives {
+		background-color: blue;
+		height: 100%;
+	}
+
+	ul.quo-photos {
+		list-style-type: none;
+		margin: 10px 0 10px 0;
+		
+	}
+
+	li.quo-photo {
+		border: 1px solid black;
+	}
+

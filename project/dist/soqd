@@ -1,0 +1,72 @@
+#!/bin/bash
+# description: soqd start/shutdown script
+# processname: soqd
+#
+ 
+# Path to your Play application install folder
+PLAY_DIR=/home/ubuntu/soq/current
+PLAY_BIN_DIR=$PLAY_DIR/bin
+PLAY=playit-web
+ 
+WHERE=/home/ubuntu/log.it
+ 
+# source function library
+. /etc/init.d/functions
+ 
+start() {
+    echo -n "Starting PlayServer service: "
+    cd $PLAY_BIN_DIR
+    sudo -s /bin/sh  -c "$PLAY_BIN_DIR/$PLAY -mem 512 >> $WHERE" &
+    RETVAL=$?
+ 
+    if [ $RETVAL -eq 0 ]; then
+        echo_success
+    else
+        echo_failure
+    fi
+    echo
+}
+stop() {
+    echo -n "Shutting down PlayServer service: "
+ 
+    sudo kill `cat $PLAY_DIR/RUNNING_PID`
+ 
+    RETVAL=$?
+ 
+    if [ $RETVAL -eq 0 ]; then
+        echo_success
+    else
+        echo_failure
+    fi
+    echo
+}
+status() {
+ 
+    RETVAL=$?
+}
+clean() {
+    RETVAL=$?
+}
+case "$1" in
+    start)
+    clean
+    start
+    ;;
+    stop)
+    stop
+    ;;
+    restart|reload)
+    stop
+    sleep 10
+    start
+    ;;
+    status)
+    status
+    ;;
+    clean)
+    clean
+    ;;
+    *)
+    echo "Usage: $0 {start|stop|restart|status}"
+esac
+exit 0
