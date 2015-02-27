@@ -20,7 +20,7 @@ import play.api.Play.current
 object Application extends Controller with MongoController {
   
   def index = Action {
-    Ok(views.html.index("The Status Of Quo"))
+    Ok(views.html.index("The Status of Quo"))
   }
 
   def collection: JSONCollection = db.collection[JSONCollection]("articles")
