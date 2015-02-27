@@ -4,7 +4,7 @@ html {
 }
 
 	body {
-		background: url(../images/notebook1.jpg) no-repeat center center fixed; 
+		background: url(../images/dandelion.jpg) no-repeat center center fixed; 
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
@@ -29,7 +29,7 @@ html {
 	}
 
 	.content {
-		font-family: 'goudy';
+		font-family: 'GoudyStM-Italic';
 		font-style: italic;
 		margin-left: 8%;
 		background: rgb(204, 204, 204); /* Fallback for older browsers without RGBA-support */
@@ -46,6 +46,21 @@ html {
          url('../fonts/GoudyStm-italic-webfont.svg') format('svg');
 
 }
+
+@font-face {
+	font-family:'GoudyStM-Italic';
+	src: url('GoudyStM-Italic_gdi.eot');
+	src: url('GoudyStM-Italic_gdi.eot?#iefix') format('embedded-opentype'),
+		url('GoudyStM-Italic_gdi.woff') format('woff'),
+		url('GoudyStM-Italic_gdi.ttf') format('truetype'),
+		url('GoudyStM-Italic_gdi.svg#GoudyStM-Italic') format('svg');
+	font-weight: 500;
+	font-style: italic;
+	font-stretch: normal;
+	unicode-range: U+0020-2122;
+}
+
+
     @font-face {
     	font-family: 'lobster';
     	src: url('../fonts/Lobster-Regular.ttf');
