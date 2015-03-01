@@ -38,7 +38,17 @@
 			restrict: 'A',
 			templateUrl: '/assets/partials/poem.view.html',
 			link: function(scope, element, attrs) {
-				element.css('height', '90%');
+				element.addClass("things");
+			}
+		}
+	});
+
+	module.directive("tech", function() {
+		return {
+			restrict: 'A',
+			template: '<a>/assets/partials/tech.view.html</a>',
+			link: function(scope, element, attrs) {
+				element.addClass("lede");
 			}
 		}
 	});

@@ -51,8 +51,8 @@ html {
 	.right_col {
 		order: 2;
 		flex: auto;
-		display: flex;
-		flex-direction: column;
+	//	display: flex;
+	//	flex-direction: column;
 		justify-content: space-between;
 		margin-top: 15%;
 		height: 60%;
@@ -69,14 +69,14 @@ html {
 		font-style: italic;
 	}
 
-	article {
+	.lede {
 		order: 2;
-		height: 20px;
-		widht: 40px;
+		text-align: center;
+		font-size: 16pt;
+		margin-top: 10%;
 	}
 
 
-	
 	.list-style {
 		list-style: none;
 	}
