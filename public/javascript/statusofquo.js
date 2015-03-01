@@ -46,7 +46,7 @@
 	module.directive("tech", function() {
 		return {
 			restrict: 'A',
-			template: '<a>/assets/partials/tech.view.html</a>',
+			template: '<a>On communication:  We start with how to talk  ::   2015-03-01</a>',
 			link: function(scope, element, attrs) {
 				element.addClass("lede");
 			}
