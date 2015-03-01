@@ -48,22 +48,33 @@ html {
 		background: rgba(204, 204, 204, 0.0); 
 	}
 
-	article {
+	.right_col {
 		order: 2;
 		flex: auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 		margin-top: 15%;
-		height: 30%;
+		height: 60%;
 		width: 40%;
-		background: rgba(200, 200, 200, 0.0);
 	}
 
 	.things {
+		order: 1;
+		background: rgba(200, 200, 200, 0.0);
 		text-align: center;
 		font-size: 16pt;
 		line-height: 24pt;
 		font-family: 'GoudyStM-Italic';
 		font-style: italic;
 	}
+
+	article {
+		order: 2;
+		height: 20px;
+		widht: 40px;
+	}
+
 
 	
 	.list-style {

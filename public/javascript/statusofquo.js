@@ -32,6 +32,17 @@
 		}
 	});
 
+
+	module.directive("poem", function() {
+		return {
+			restrict: 'A',
+			templateUrl: '/assets/partials/poem.view.html',
+			link: function(scope, element, attrs) {
+				element.css('height', '90%');
+			}
+		}
+	});
+
 }(angular.module("StatusOfQuo", ["restangular"])));
 
 
