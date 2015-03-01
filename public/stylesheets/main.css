@@ -59,6 +59,10 @@ html {
 
 	.things {
 		text-align: center;
+		font-size: 16pt;
+		line-height: 24pt;
+		font-family: 'GoudyStM-Italic';
+		font-style: italic;
 	}
 
 	
