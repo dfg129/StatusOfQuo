@@ -15,6 +15,18 @@ html {
 		width: 100%;
 		height: 100%;
 		margin: 0;
+
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.quo-container {
+		// background-color: #11aa55;
+		order: 1;
+		flex: auto;
+		height: 13%;
+		//border: 1px solid red;
 	}
 
 	.quo-title {
@@ -36,48 +48,25 @@ html {
 		background: rgba(204, 204, 204, 0.0); 
 	}
 
-	@font-face {
-    font-family: 'goudy';
-    src: url('../fonts/GoudyStm-webfont.woff') format('woff'),
-         url('../fonts/GoudyStm-webfont.ttf') format('truetype'),
-         url('../fonts/GoudyStm-webfont.svg') format('svg'),
-         url('../fonts/GoudyStm-italic-webfont.woff') format('woff'),
-         url('../fonts/GoudyStm-italic-webfont.ttf') format('ttf'),
-         url('../fonts/GoudyStm-italic-webfont.svg') format('svg');
+	article {
+		order: 2;
+		flex: auto;
+		margin-top: 15%;
+		height: 30%;
+		width: 40%;
+		background: rgba(200, 200, 200, 0.0);
+	}
 
-}
+	.things {
+		text-align: center;
+	}
 
-@font-face {
-	font-family:'GoudyStM-Italic';
-	src: url('GoudyStM-Italic_gdi.eot');
-	src: url('GoudyStM-Italic_gdi.eot?#iefix') format('embedded-opentype'),
-		url('GoudyStM-Italic_gdi.woff') format('woff'),
-		url('GoudyStM-Italic_gdi.ttf') format('truetype'),
-		url('GoudyStM-Italic_gdi.svg#GoudyStM-Italic') format('svg');
-	font-weight: 500;
-	font-style: italic;
-	font-stretch: normal;
-	unicode-range: U+0020-2122;
-}
-
-
-    @font-face {
-    	font-family: 'lobster';
-    	src: url('../fonts/Lobster-Regular.ttf');
-    	font-style: italic;
-    	font-weight: norma;
-    }
-
-
+	
 	.list-style {
 		list-style: none;
 	}
 
-	.quo-container {
-		// background-color: #11aa55;
-		height: 93%;
-		//border: 1px solid red;
-	}
+	
 
 	.quo-main {
 		height: 100%;
