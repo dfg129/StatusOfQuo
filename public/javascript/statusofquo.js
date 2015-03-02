@@ -1,28 +1,38 @@
 
 
-(function(module) {
-	module.controller("SOQController", ["$scope", "Restangular", function($scope, Restangular) {
-	  
-		$scope.photos = buildPhotoSet();
+(function (module) {
+  module.config(function ($componentLoaderProvider) {
+  
+   $componentLoaderProvider.setTemplateMapping(function (name) {
+     // name == component name
+     return '/assets/components/' + name + '/' + name + '.html';
+   });
+  });
+
+  module.controller('SOQController', ['$scope', '$router', function ($scope, $router) {
+  
+
+  $router.config([
+  	 { path: '/', component: 'intro' },
+     { path: 'article', component: 'article' }
+  	 ]);
 
         var getArticles = function () {
-        	var articles = Restangular.all('articles');
-            articles.getList().then(function(articles) {
-            	$scope.articles = articles[0];
-        	});
+        //	var articles = Restangular.all('articles');
+      //      articles.getList().then(function(articles) {
+      //      	$scope.articles = articles[0];
+      //  	});
         }
 
-	    var articleREST = Restangular.one('articles', '1');
+	  //  $scope.addArticle = function () {
+	 //   	articlesREST.post('article', newArticle);
+	 //   };
 
-	    $scope.addArticle = function () {
-	    	articlesREST.post('article', newArticle);
-	    };
-
-	    getArticles();
+	  //  getArticles();
 	    
 	}]);
  
-	module.directive("mainView", function() {
+	  module.directive("mainView", function() {
 		return {
 			restrict: 'A',
 			templateUrl: '/assets/partials/main.view.html',
@@ -46,14 +56,14 @@
 	module.directive("tech", function() {
 		return {
 			restrict: 'A',
-			template: '<a>On communication:  We start with how to talk  ::   2015-03-01</a>',
+			templateUrl: '/assets/partials/link.view.html',
 			link: function(scope, element, attrs) {
 				element.addClass("lede");
 			}
 		}
 	});
 
-}(angular.module("StatusOfQuo", ["restangular"])));
+}(angular.module('StatusOfQuo', ['ngNewRouter', 'StatusOfQuo.article', 'StatusOfQuo.intro'])));
 
 
 
@@ -68,5 +78,3 @@ function buildPhotoSet( ) {
 	return photos;
 }
 
-
-"In an age when few people could read or write , stained glassed windows became the muli-media of the day ~ on Cathedrals"

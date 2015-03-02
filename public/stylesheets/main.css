@@ -41,7 +41,7 @@ html {
 	}
 
 	.content {
-		font-family: 'GoudyStM-Italic';
+		font-family:  'sans-serif';
 		font-style: italic;
 		margin-left: 8%;
 		background: rgb(204, 204, 204); /* Fallback for older browsers without RGBA-support */
@@ -65,7 +65,7 @@ html {
 		text-align: center;
 		font-size: 16pt;
 		line-height: 24pt;
-		font-family: 'GoudyStM-Italic';
+		//font-family: 'GoudyStM-Italic';
 		font-style: italic;
 	}
 
