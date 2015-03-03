@@ -3,8 +3,9 @@
 
 <html>
 <head>
-<link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/fonts.css")">
+  <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/fonts.css")">
 	<link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+	<link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/animations.css")">
 	<link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/bootstrap.css")">
 	<link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
 </head>
@@ -13,7 +14,9 @@
 
 
 	
-	<ng-viewport></ng-viewport>
+	 <div class="view-container">
+    <div ng-viewport="intro" class="view-frame"></div>
+  </div>
 	
 
 	<div class="footer navbar-fixed-bottom">
@@ -23,6 +26,7 @@
 
 	<script src='@routes.Assets.at("vendor/angular.js")'></script>	
 	<script src='@routes.Assets.at("vendor/router.es5.js")'></script>	
+	<script src='@routes.Assets.at("vendor/angular-animate.js")'></script>	
 	<script src='@routes.Assets.at("javascript/statusofquo.js")'></script>
 	<script src='@routes.Assets.at("components/article/article.js")'></script>	
 	<script src='@routes.Assets.at("components/intro/intro.js")'></script>	

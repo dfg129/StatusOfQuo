@@ -63,7 +63,7 @@
 		}
 	});
 
-}(angular.module('StatusOfQuo', ['ngNewRouter', 'StatusOfQuo.article', 'StatusOfQuo.intro'])));
+}(angular.module('StatusOfQuo', ['ngNewRouter', 'ngAnimate', 'StatusOfQuo.article', 'StatusOfQuo.intro'])));
 
 
 
