@@ -15,10 +15,15 @@ html {
 		width: 100%;
 		height: 100%;
 		margin: 0;
+}
 
+
+	.intro {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
+		width: 100%;
+		height: 100%;
 	}
 
 	.quo-container {
@@ -35,13 +40,13 @@ html {
 		font-family: Geneva, Tahoma, Verdana, sans-serif;
 		color: yellow;
 		height: 50px;
-		margin-top: 3%;
+		margin-top: 7%;
 		margin-left: 9%;
 		//border: 1 solid red;
 	}
 
 	.content {
-		font-family:  'sans-serif';
+		font-family: 'GoudyStM-Italic, sans-serif';
 		font-style: italic;
 		margin-left: 8%;
 		background: rgb(204, 204, 204); /* Fallback for older browsers without RGBA-support */
@@ -51,9 +56,6 @@ html {
 	.right_col {
 		order: 2;
 		flex: auto;
-	//	display: flex;
-	//	flex-direction: column;
-		justify-content: space-between;
 		margin-top: 15%;
 		height: 60%;
 		width: 40%;
@@ -65,7 +67,7 @@ html {
 		text-align: center;
 		font-size: 16pt;
 		line-height: 24pt;
-		//font-family: 'GoudyStM-Italic';
+		font-family: 'GoudyStM-Italic, sans-serif';
 		font-style: italic;
 	}
 
